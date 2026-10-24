@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-model-router"
+version = "0.1.0"
+description = "Evidence-based multi-model routing for software projects"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+
+[project.scripts]
+model-router = "model_router.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

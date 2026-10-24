@@ -1,0 +1,10 @@
+evidence:
+  - claim: model supports tool calling
+    subject: provider/example-coding-model
+    source:
+      url: https://example.com/docs
+      type: official
+      checked_at: 2026-01-01
+    verification: documented
+    confidence: low
+    expires_after_days: 30

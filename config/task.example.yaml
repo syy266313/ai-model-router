@@ -1,0 +1,8 @@
+task:
+  id: feature-example
+  role: implementer
+  input_tokens: 12000
+  expected_output_tokens: 6000
+  required_capabilities: [coding, tool_calling]
+  max_cost_usd: 0.50
+  privacy: private

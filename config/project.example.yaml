@@ -1,0 +1,41 @@
+project:
+  name: example-project
+  stage: implementation
+  privacy: private
+  constraints:
+    max_task_cost_usd: 0.50
+    max_latency_seconds: 120
+    require_citations_for_research: true
+    require_human_approval_for_code_changes: true
+
+roles:
+  researcher:
+    required_capabilities: [web_search, citations]
+  architect:
+    required_capabilities: [long_context, reasoning]
+  implementer:
+    required_capabilities: [coding, tool_calling]
+  tester:
+    required_capabilities: [coding, structured_output]
+  reviewer:
+    required_capabilities: [coding, reasoning]
+
+workflow:
+  name: feature-development
+  steps:
+    - id: research
+      role: researcher
+      output: research-report
+    - id: design
+      role: architect
+      input: [research-report]
+      approval_required: true
+    - id: implement
+      role: implementer
+      input: [research-report]
+    - id: test
+      role: tester
+      input: [implementation]
+    - id: review
+      role: reviewer
+      input: [implementation, test-report]
