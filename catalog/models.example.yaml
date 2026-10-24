@@ -1,17 +1,21 @@
+# Placeholder only. Never use these values for a recommendation.
 models:
   - id: provider/example-coding-model
     provider: example-provider
     relay: example-relay
-    capabilities: [coding, tool_calling, structured_output]
-    context_window: 128000
+    upstream_model_id: unknown
+    relay_model_id: unknown
+    capabilities:
+      upstream_documented: []
+      relay_claimed: []
+      runtime_verified: []
+    context_window: null
     pricing:
       currency: USD
-      input_per_million_tokens: 1.00
-      output_per_million_tokens: 5.00
-      relay_multiplier: 1.00
-    evidence:
-      - url: https://example.com/model-docs
-        type: official
-        verified_at: 2026-01-01
-        confidence: low
+      input_per_million_tokens: null
+      output_per_million_tokens: null
+      relay_multiplier: null
+      multiplier_applies_to: unknown
+      verified_at: null
+    evidence: []
     status: example_only

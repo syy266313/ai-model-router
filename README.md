@@ -25,17 +25,14 @@ This first slice provides:
 
 ## Quick start
 
-```bash
-python3 -m model_router.cli validate config/task.example.json
-python3 -m model_router.cli estimate config/task.example.json
-```
-
-From the repository root:
+From the repository root, use the source tree explicitly:
 
 ```bash
-PYTHONPATH=src python3 -m model_router.cli validate config/project.example.yaml
-PYTHONPATH=src python3 -m model_router.cli estimate config/task.example.yaml
+PYTHONPATH=src python3 -m model_router.cli validate config/task.example.json
+PYTHONPATH=src python3 -m model_router.cli estimate config/task.example.json
 ```
+
+The current CLI accepts JSON. YAML examples document the intended richer project configuration and will become executable when schema loading is added.
 
 ## Privacy boundary
 
