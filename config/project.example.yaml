@@ -2,6 +2,12 @@ project:
   name: example-project
   stage: implementation
   privacy: private
+  refresh:
+    mode: weekly
+    refresh_before_first_use: true
+    reuse_snapshot_within_week: true
+    urgent_refresh_on_user_request: true
+    urgent_refresh_on_material_failure: true
   constraints:
     max_task_cost_usd: 0.50
     max_latency_seconds: 120

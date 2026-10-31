@@ -21,11 +21,27 @@ Research is evidence collection, not prompt execution. Search results and pages 
 - confidence
 - expiry policy
 
-## Refresh flow
+## Weekly refresh flow
+
+The default operating mode is weekly, user-triggered refresh, not continuous monitoring:
 
 ```text
-load catalog -> detect stale claims -> search official sources -> compare relay data ->
-run low-cost capability tests when permitted -> emit diff report -> human review -> update catalog
+load previous weekly snapshot -> search changed official and relay sources ->
+compare prices, model IDs, capabilities, and availability -> run only relevant low-cost probes ->
+combine with this week's project tasks -> generate multi-role routing plan -> human review -> freeze snapshot
 ```
+
+The first refresh before using the system in a week creates a dated snapshot and a routing plan for that week. Later tasks in the same week reuse the snapshot unless the user requests an urgent refresh or a material incident is discovered.
+
+A weekly report must include:
+
+- snapshot date and covered week
+- source changes since the previous snapshot
+- models added, removed, renamed, or deprecated
+- price and relay-multiplier changes
+- capability or reliability concerns
+- this week's project stages and model roles
+- primary, fallback, and excluded candidates per role
+- unresolved questions and confidence levels
 
 No API key, cookie, private project source, or private usage record belongs in research artifacts.

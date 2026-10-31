@@ -9,13 +9,17 @@
 - [ ] Real schema validation
 - [ ] CI tests
 
-## Phase 1: research
+## Phase 1: weekly research and routing
 
 - Search provider interface
 - Page fetcher with SSRF protections
 - Official, relay, community, and runtime evidence types
+- Weekly dated snapshots instead of continuous monitoring
+- Compare this week's sources with the previous snapshot
+- Weekly project-to-role-to-model routing report
 - Evidence freshness and conflict reporting
 - Model catalog update reports
+- Optional urgent refresh when the user requests it or a material incident is known
 
 ## Phase 2: multi-model workflows
 

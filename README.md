@@ -2,7 +2,7 @@
 
 An open-source, evidence-based multi-model routing system for software projects.
 
-AI Model Router helps a project choose **different models for different roles and workflow stages**. It combines web research, capability verification, relay pricing, cost estimation, project constraints, and reproducible evaluations.
+AI Model Router helps a project choose **different models for different roles and workflow stages**. Before the first use each week, it refreshes model and relay information, evaluates relevant candidates, and produces a dated routing plan for that week's work. It then reuses that snapshot until the next weekly refresh or an urgent re-check is requested.
 
 ## Core idea
 
