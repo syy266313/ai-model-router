@@ -65,13 +65,9 @@ def recommend(task_text, project, catalog, budget_usd=None):
         if not fit:
             assignments.append({"stage": stage, "role": role, "status": "no_candidate", "reason": "No configured candidate for this role."})
             continue
-        preferred_groups = {
-            "architect": ["gpt-pro-兜底分组", "gpt-max-不降智版"],
-            "reviewer": ["gpt-pro-兜底分组", "gpt-max-不降智版"],
-            "implementer": ["gpt-plus-稳定分组", "gpt-pro-兜底分组"],
-            "tester": ["gpt-plus-稳定分组", "gpt-pro-兜底分组"],
-            "researcher": ["gpt-plus-稳定分组", "gpt-pro-兜底分组"],
-        }.get(role, [])
+        preferred_groups = catalog.get("role_preferences", {}).get(role, [])
+        # If a catalog has no local preference, prefer the cheapest eligible candidate.
+        # Private relay group names belong in the private catalog, not this public module.
         ranked = sorted(fit, key=lambda c: (preferred_groups.index(c["group"]) if c["group"] in preferred_groups else len(preferred_groups), _price(c, *_stage_budget(stage, decision["complexity"]))))
         primary = ranked[0]
         in_tokens, out_tokens = _stage_budget(stage, decision["complexity"])
