@@ -1,0 +1,42 @@
+{
+  "project": "poker-coach-lab",
+  "week_start": "2026-11-02",
+  "currency": "USD",
+  "budget_usd": 1.0,
+  "task_summary": "本周对 Feltwise 做一次常规功能迭代，并进行独立验收。项目要求先审计再确认，保留 iOS 13 Safari 兼容，不随意改 gameEngine.js 或 bot.js。",
+  "roles": [
+    {
+      "role": "architect",
+      "task": "审计当前实现、拆分方案并定义验收标准",
+      "input_tokens": 6000,
+      "expected_output_tokens": 2000,
+      "preferred_groups": ["gpt-pro-兜底分组", "gpt-max-不降智版"]
+    },
+    {
+      "role": "implementer",
+      "task": "在确认方案后实现单一范围的前端功能",
+      "input_tokens": 12000,
+      "expected_output_tokens": 6000,
+      "preferred_groups": ["gpt-plus-稳定分组", "gpt-pro-兜底分组"]
+    },
+    {
+      "role": "tester",
+      "task": "补充契约/回归测试并运行相关验收",
+      "input_tokens": 3000,
+      "expected_output_tokens": 3000,
+      "preferred_groups": ["gpt-plus-稳定分组", "gpt-pro-兜底分组"]
+    },
+    {
+      "role": "reviewer",
+      "task": "独立审查实现、兼容性、回归和测试结果",
+      "input_tokens": 10000,
+      "expected_output_tokens": 3000,
+      "preferred_groups": ["gpt-pro-兜底分组", "gpt-max-不降智版"]
+    }
+  ],
+  "policy": {
+    "require_runtime_verified_capabilities": false,
+    "allow_relay_claims_as_quality_evidence": false,
+    "prefer_independent_provider_for_review": true
+  }
+}

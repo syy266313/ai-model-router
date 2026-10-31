@@ -21,6 +21,8 @@ This first slice provides:
 - Token cost estimation including relay multipliers
 - Evidence records with source type, verification date, and confidence
 - A research adapter boundary for search and page-fetch implementations
+- Natural-language automatic task classification and workflow generation
+- Role-based primary and fallback selection from a weekly relay snapshot
 - A CLI foundation suitable for later web-search and benchmark integrations
 
 ## Quick start

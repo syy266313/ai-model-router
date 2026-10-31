@@ -1,0 +1,15 @@
+{
+  "name": "poker-coach-lab",
+  "stack": "javascript",
+  "compatibility_targets": ["ios13_safari"],
+  "hard_constraints": [
+    "Read agents.md before each task.",
+    "Audit and propose before editing; wait for user approval before code changes.",
+    "Do not modify js/gameEngine.js unless explicitly requested.",
+    "Do not modify js/bot.js unless the task is bot tuning.",
+    "Keep each task to one scoped change.",
+    "Run deno check and relevant tests after changes."
+  ],
+  "default_budget_usd": 1.0,
+  "privacy": "public_project_code"
+}

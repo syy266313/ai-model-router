@@ -6,6 +6,7 @@ sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
 
 from model_router.cost import Pricing
 from model_router.router import Candidate, route
+from model_router.auto_router import classify, recommend
 
 
 class RouterTests(unittest.TestCase):
